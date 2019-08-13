@@ -20,3 +20,7 @@ curl https://raw.githubusercontent.com/burkeazbill/getOctant/master/getOctant.sh
 ```
 
 **WARNING:** Always check source code before running in the fashion shown above !!!
+
+## Contribute?
+
+I would be very happy to accept contributions (PR) to make this script better; perhaps a bit more on the RPM/DEB sides at the end of the script for example.
