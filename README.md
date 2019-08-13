@@ -12,3 +12,11 @@ By default, the script will download the .tar.gz file. If you are running Linux 
 
 ./getOctant.sh rpm
 ```
+
+To run script quickly:
+
+```bash
+curl https://raw.githubusercontent.com/burkeazbill/getOctant/master/getOctant.sh | bash
+```
+
+**WARNING:** Always check source code before running in the fashion shown above !!!

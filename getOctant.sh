@@ -33,9 +33,14 @@ export OCTANT_VERSION=$(wget -qO- https://github.com/vmware/octant/releases/late
 # Build the filename to download:
 FILENAME="octant_$OCTANT_VERSION""_$OS-64bit"
 echo https://github.com/vmware/octant/releases/download/v$OCTANT_VERSION/$FILENAME.$FILE_EXT
+
 # Now retrieve the file:
 curl -L https://github.com/vmware/octant/releases/download/v$OCTANT_VERSION/$FILENAME.$FILE_EXT -o $FILENAME.$FILE_EXT 
+
+# Show the file that was downloaded:
 ls -ahl $FILENAME.$FILE_EXT
+
+# If the file is a tar.gz, uncompress it and run the binary to show the version:
 if [ "$FILE_EXT" == "tar.gz" ]; then
   tar -zxvf $FILENAME.$FILE_EXT
   cd $FILENAME
