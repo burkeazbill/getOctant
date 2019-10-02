@@ -28,14 +28,14 @@ if [ ${#} -gt 0 ]; then
 fi
 
 # The following wget command retrieves the latest version number for Octant
-export OCTANT_VERSION=$(wget -qO- https://github.com/vmware/octant/releases/latest | sed -nE 's|.*"Recent Commits to octant:v(.*)\" .*|\1|p')
+export OCTANT_VERSION=$(wget -qO- https://github.com/vmware-tanzu/octant/releases/latest | sed -nE 's|.*"Recent Commits to octant:v(.*)\" .*|\1|p')
 
 # Build the filename to download:
 FILENAME="octant_$OCTANT_VERSION""_$OS-64bit"
-echo https://github.com/vmware/octant/releases/download/v$OCTANT_VERSION/$FILENAME.$FILE_EXT
+echo https://github.com/vmware-tanzu/octant/releases/download/v$OCTANT_VERSION/$FILENAME.$FILE_EXT
 
 # Now retrieve the file:
-curl -L https://github.com/vmware/octant/releases/download/v$OCTANT_VERSION/$FILENAME.$FILE_EXT -o $FILENAME.$FILE_EXT 
+curl -L https://github.com/vmware-tanzu/octant/releases/download/v$OCTANT_VERSION/$FILENAME.$FILE_EXT -o $FILENAME.$FILE_EXT 
 
 # Show the file that was downloaded:
 ls -ahl $FILENAME.$FILE_EXT

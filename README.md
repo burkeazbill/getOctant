@@ -1,6 +1,6 @@
 # Get Octant
 
-This repo holds a script that may be used to retrieve the current version of VMware's [Octant](https://github.com/vmware/octant) developer dashboard.
+This repo holds a script that may be used to retrieve the current version of VMware's [Octant](https://github.com/vmware-tanzu/octant) developer dashboard.
 
 The script is intended for use with MacOS and Linux operating systems. It uses the output of uname -s to determine the current OS. It also checks the Octant releases page for the current version, then uses that version info plus the OS info to construct the correct url to download the file from.
 
